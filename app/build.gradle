@@ -24,6 +24,8 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
+
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -48,4 +50,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'androidx.biometric:biometric:1.2.0-alpha05'
+
+    implementation 'com.amplifyframework:aws-core:2.8.7'
+    implementation 'com.amplifyframework:aws-auth-cognito:2.8.7'
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 }
